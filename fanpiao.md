@@ -51,6 +51,17 @@
 * 参数：
     * tokenId
 * 返回数据：
+    - token总发行量：token.total_supply / (10^token.decimals)
+    - token合约地址：token.contract_address
+
+    - token现价：exchange.price（单位cny）
+    - 流动金池：
+        - CNY流动金：exchange.cny_reserve /(10^token.decimals)
+        - token流动金：exchange.token_reserve / (10^token.decimals)
+    - 24h成交量
+        - token成交量：exchange.volume_24h / (10^token.decimals)
+        - cny成交额：exchange.amount_24h / (10^token.decimals)
+    - 24h成交量涨跌幅：exchange.change_24h
 ```
 {
     "code": 0,
@@ -107,17 +118,6 @@
     }
 }
 ```
-- token总发行量：token.total_supply / (10^token.decimals)
-- token合约地址：token.contract_address
-
-- token现价：exchange.price（单位cny）
-- 流动金池：
-    - CNY流动金：exchange.cny_reserve /(10^token.decimals)
-    - token流动金：exchange.token_reserve / (10^token.decimals)
-- 24h成交量
-    - token成交量：exchange.volume_24h / (10^token.decimals)
-    - cny成交额：exchange.amount_24h / (10^token.decimals)
-- 24h成交量涨跌幅：exchange.change_24h
 
 ### Fan票持仓列表
 * GET /token/{tokenId}/balances
