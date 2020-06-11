@@ -1,6 +1,6 @@
 # Fan票系统
 
-### 1. 获取fan票列表
+### fan票列表
 * GET /token/all
 * 参数：
     * page 默认值1
@@ -46,7 +46,7 @@
 }
 ```
 
-### 2. 获取Fan票的信息
+### Fan票的信息
 * GET /minetoken/{tokenId}
 * 参数：
     * tokenId
@@ -118,6 +118,29 @@
     }
 }
 ```
+### 查看用户发行的fan票
+* GET token/user/{userId}
+* 返回数据
+```
+{
+    "code": 0,
+    "message": "成功",
+    "data": {
+        "id": 44,
+        "uid": 23,
+        "name": "稳定币",
+        "symbol": "DAI",
+        "decimals": 4,
+        "total_supply": 1000000000,
+        "create_time": "2020-01-03T04:32:56.000Z",
+        "status": 1,
+        "logo": "/image/2020/01/03/882a27ba3e8a1b93a1ce66b05cdb6173.jpeg",
+        "brief": "加油！奥力给！",
+        "introduction": "",
+        "contract_address": "0x4897835C0657A8d27b3Ab22AA3f09b49Ca4550d0"
+    }
+}
+```
 
 ### Fan票持仓列表
 * GET /token/{tokenId}/balances
@@ -150,9 +173,113 @@
 }
 ```
 
+### 流动金持仓列表
+* GET /token/{tokenId}/liquidity/balances
+* 其他同【Fan票持仓列表】
+
 ### Fan票流水列表
-* GET /token/{tokenId}/transaction
+* GET /token/{tokenId}/transactions
 * 参数：
     * pagesize 默认值 10
     * page 默认值 1
 * 返回数据
+```
+{
+    "code": 0,
+    "message": "成功",
+    "data": {
+        "count": 838,
+        "list": [
+            {
+                "token_id": 22,
+                "from_uid": 1072,
+                "to_uid": 2331,
+                "amount": 134762,
+                "create_time": "2020-06-11T04:39:53.000Z",
+                "type": "exchange_purchase",
+                "tx_hash": "0x740ad9ec829513d583882441584374789175a1d4f332a39450e7eac50268c43b",
+                "name": "岛岛币",
+                "symbol": "DAO",
+                "decimals": 4,
+                "from_username": "exchange_DAO",
+                "from_nickname": null,
+                "from_avatar": "/avatar/exchange.png",
+                "to_username": "pengan1987",
+                "to_nickname": "pengan",
+                "to_avatar": "/avatar/2020/06/06/50916d14ec93e5860129db6d17653a28.jpg"
+            }
+        ]
+    }
+}
+```
+### 流动金流水列表
+* GET /token/{tokenId}/liquidity/transactions
+* 其他同【Fan票流水列表】
+
+### fan票相关创作列表
+* GET /minetoken/{tokenId}/related
+* 参数： 
+    * page: 1
+    * pagesize: 10
+    * filter:
+        * 1: 持票可见
+        * 2: 付费可见
+        * 3: 持票可见 + 付费可见
+    * sort: 
+        * time-desc: 时间降序
+        * popular-desc: 热度降序
+* 返回数据：
+```
+{
+    "code": 0,
+    "message": "成功",
+    "data": {
+        "count": 65,
+        "list": [
+            {
+                "id": 4331,
+                "uid": 526,
+                "author": "lychees",
+                "title": "Defi Billboard Design Doc",
+                "hash": "QmTHs6vyZqPzE4SP6zpsNK8P7pzQUkibLeYgKiHd5NXmMn",
+                "create_time": "2020-06-11T04:42:26.000Z",
+                "cover": "/image/2020/06/11/357064a8ff7856c838e50dd7bbc5664d.png",
+                "require_holdtokens": 1,
+                "require_buy": 0,
+                "short_content": "。",
+                "nickname": "xiaodao",
+                "avatar": "/avatar/2019/07/12/d0c1f59b794f1dd9437c84af8cc57b6e.png",
+                "read": 4,
+                "likes": 3,
+                "pay_platform": null,
+                "pay_symbol": null,
+                "pay_price": null,
+                "pay_decimals": null,
+                "pay_stock_quantity": null,
+                "token_id": 22,
+                "token_amount": 1000000,
+                "token_name": "岛岛币",
+                "token_symbol": "DAO",
+                "token_decimals": 4,
+                "tags": []
+            }
+        ]
+    }
+}
+```
+
+### 查看我当前token的持仓
+* GET /minetoken/balance
+* 参数：
+    * tokenId
+* Headers
+    * x-access-token: 用户登录的accessToken
+* 返回数据
+    * 持仓量 = data / (10^token_decimals)
+```
+{
+    "code": 0,
+    "message": "成功",
+    "data": 111434
+}
+```
