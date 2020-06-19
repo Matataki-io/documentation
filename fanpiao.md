@@ -283,3 +283,38 @@
     "data": 111434
 }
 ```
+
+### Fan票转账
+![2020-06-19-16-04-13](images/2020-06-19-16-04-13.png)
+* POST /minetoken/transfer
+* Headers
+    * x-access-token: 用户登录的accessToken
+* request body
+```
+{"tokenId":14,"to":38,"amount":10000}
+```
+* 返回数据
+tx_hash为交易成功的链上hash
+```
+{
+    "code":0,
+    "message":"成功",
+    "data":{
+        "tx_hash":"0xebd43a6af34dea4004f75134d0a65db3f42a48104165b85e4bda552325cce0ca"
+    }
+}
+```
+
+### CNY转账
+![2020-06-19-16-05-54](images/2020-06-19-16-05-54.png)
+* POST /asset/transfer
+* Headers
+    * x-access-token: 用户登录的accessToken
+* request body
+```
+{"symbol":"CNY","to":38,"amount":100}
+```
+* 返回数据
+```
+{"code":0,"message":"成功"}
+```
