@@ -293,8 +293,17 @@ showToc: true
 * Headers
     * x-access-token: 用户登录的accessToken
 * request body
+    * tokenId:fan票id
+    * to: 转给的用户id
+    * amount: 转账数量
+    * memo: 转账留言
 ```
-{"tokenId":14,"to":38,"amount":10000}
+{
+    "tokenId":14,
+    "to":38,
+    "amount":10000,
+    "memo": "奥利给"
+}
 ```
 * 返回数据
 tx_hash为交易成功的链上hash
