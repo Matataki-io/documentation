@@ -1,3 +1,6 @@
+---
+showToc: true
+---
 # Fan票系统
 
 ### fan票列表
