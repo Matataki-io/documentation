@@ -330,3 +330,57 @@ tx_hash为交易成功的链上hash
 ```
 {"code":0,"message":"成功"}
 ```
+
+### 查看我所有fan票的日志记录
+* GET /token/allLogs
+* 参数：
+    * pagesize: 默认10（可选）
+    * page: 默认1（可选）
+    * type（可选）可选值如下
+        * mint: 增发,
+        * transfer: 转账,
+        * exchange_purchase: 交易所购买,
+        * exchange_addliquidity: 添加流动金',
+        * exchange_removeliquidity: 删除流动金,
+        * reward_article: 打赏文章,
+        * pay_article: 支付文章,
+* Headers
+    * x-access-token: 用户登录的accessToken
+* 返回数据
+    * post_id: 文章id
+    * title: 文章名
+    * cover: 文章封面
+    * memo: 交易memo
+```
+{
+    "code": 0,
+    "message": "成功",
+    "data": {
+        "count": 125,
+        "list": [
+            {
+                "token_id": 14,
+                "from_uid": 1042,
+                "to_uid": 1105,
+                "amount": 10000,
+                "create_time": "2020-07-07T20:13:52.000Z",
+                "type": "reward_article",
+                "tx_hash": "0x119676a8937866c9b45d0d1f4600f98eaf8c923bad306aa309d1b90027473d6d",
+                "post_id": 102024,
+                "memo": "测试冲冲冲",
+                "name": "小田的空气币",
+                "symbol": "XTB",
+                "decimals": 4,
+                "from_username": "sh****eo@163.com",
+                "from_nickname": "天下第一",
+                "from_avatar": "/avatar/2019/10/16/9eff045272a135e771b60f5bb3badd89.png",
+                "to_username": "gu*****o71@hotmail.com",
+                "to_nickname": "林可MATATAKI",
+                "to_avatar": "/avatar/2019/11/07/740fd91594538dbe1f016bd301e7e234.jpg",
+                "title": "123123",
+                "cover": "/image/2020/06/29/e85a24054d5f4780d3bceca9748956de.jpg"
+            },
+        ]
+    }
+}
+```
