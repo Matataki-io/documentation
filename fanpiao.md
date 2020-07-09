@@ -331,7 +331,7 @@ tx_hash为交易成功的链上hash
 {"code":0,"message":"成功"}
 ```
 
-### 查看我所有fan票的日志记录
+### 查看我所有fan票的交易日志记录
 * GET /token/allLogs
 * 参数：
     * pagesize: 默认10（可选）
@@ -379,6 +379,44 @@ tx_hash为交易成功的链上hash
                 "to_avatar": "/avatar/2019/11/07/740fd91594538dbe1f016bd301e7e234.jpg",
                 "title": "123123",
                 "cover": "/image/2020/06/29/e85a24054d5f4780d3bceca9748956de.jpg"
+            },
+        ]
+    }
+}
+```
+
+### 查看我所有fan票的流动金日志记录
+* GET /token/allLiquidityLogs
+* 参数：
+    * pagesize: 默认10（可选）
+    * page: 默认1（可选）
+    * type（可选）可选值如下
+        * exchange_addliquidity: 添加流动金',
+        * exchange_removeliquidity: 删除流动金,
+* Headers
+    * x-access-token: 用户登录的accessToken
+* 返回数据
+```
+{
+    "code": 0,
+    "message": "成功",
+    "data": {
+        "count": 1,
+        "list": [
+            {   "id": 69,
+                "uid": 1042,
+                "token_id": 18,
+                "cny_amount": 100,
+                "token_amount": 3534,
+                "liquidity": 9,
+                "create_time": "2020-06-02T00:52:21.000Z",
+                "name": "林小可",
+                "symbol": "LLKT",
+                "decimals": 4,
+                "total_supply": 10000000,
+                "logo": "/image/2019/10/11/d55345c66f1f620ba2418dd5f3f58964.jpg",
+                "username": "gu*****o71@gmail.com",
+                "nickname": "007"
             },
         ]
     }
