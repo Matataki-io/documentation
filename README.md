@@ -17,3 +17,11 @@
 ## 什么是 Personal Token
 
 个人代币 Personal Token(a.k.a. Social Money, Status Token) 是一种发行主体为个人或者组织的代币，发行主体可以自行定义其价格，功能，互动，与获取方式。使用游戏化的方式，增进创作者与社区之间的联系，并借由自由市场进行价值发现。
+
+
+### Deploy
+
+```bash
+gitbook install
+gitbook build
+```
