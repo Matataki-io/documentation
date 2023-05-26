@@ -7,3 +7,6 @@ yarn.lock
 .idea/
 .DS_Store
 _book/
+.temp
+.cache
+.vscode
