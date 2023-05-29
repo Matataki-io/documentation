@@ -10,3 +10,4 @@ _book/
 .temp
 .cache
 .vscode
+docs/.vuepress/dist
