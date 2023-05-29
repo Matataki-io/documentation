@@ -1,19 +1,23 @@
 # 账号系统
+
 开发者可以去[matataki](https://www.matataki.io/article/)平台注册账号
 
-![2020-06-11-14-51-50](images/2020-06-11-14-51-50.png)
+![2020-06-11-14-51-50](/images/2020-06-11-14-51-50.png)
 
-### 1. 获取用户登录token
+### 1. 获取用户登录 token
 
-* POST /login/account 
-* 请求参数
+- POST /login/account
+- 请求参数
+
 ```
 {
     "username":"xxxx@xxx.com",
     "password":"xxxx"
 }
 ```
-* 返回数据，access token为response.data
+
+- 返回数据，access token 为 response.data
+
 ```
 {
     "code": 0,
@@ -23,9 +27,11 @@
 ```
 
 ### 2. 获取用户信息
-* GET /user/{userId}
-* userId：用户的id，类型为int
-* 返回数据
+
+- GET /user/{userId}
+- userId：用户的 id，类型为 int
+- 返回数据
+
 ```
 {
     "code":0,

@@ -1,21 +1,24 @@
 ---
 showToc: true
 ---
-# Fan票系统
 
-### fan票列表
-* GET /token/all
-* 参数：
-    * page 默认值1
-    * pagesize 默认值20
-    * sort 排序方式，可选值：
-        * general：综合排序
-        * unit-price-(desc|asc)：单价排序
-        * liquidity-(desc|asc)：流动金排序
-        * exchange-(desc|asc)：24h成交量排序
-        * name-(desc|asc)：首字母排序
-        * time-(desc|asc)：时间排序
-* 返回数据
+# Fan 票系统
+
+### fan 票列表
+
+- GET /token/all
+- 参数：
+  - page 默认值 1
+  - pagesize 默认值 20
+  - sort 排序方式，可选值：
+    - general：综合排序
+    - unit-price-(desc|asc)：单价排序
+    - liquidity-(desc|asc)：流动金排序
+    - exchange-(desc|asc)：24h 成交量排序
+    - name-(desc|asc)：首字母排序
+    - time-(desc|asc)：时间排序
+- 返回数据
+
 ```
 {
     "code": 0,
@@ -49,22 +52,25 @@ showToc: true
 }
 ```
 
-### Fan票的信息
-* GET /minetoken/{tokenId}
-* 参数：
-    * tokenId
-* 返回数据：
-    - token总发行量：token.total_supply / (10^token.decimals)
-    - token合约地址：token.contract_address
+### Fan 票的信息
 
-    - token现价：exchange.price（单位cny）
-    - 流动金池：
-        - CNY流动金：exchange.cny_reserve /(10^token.decimals)
-        - token流动金：exchange.token_reserve / (10^token.decimals)
-    - 24h成交量
-        - token成交量：exchange.volume_24h / (10^token.decimals)
-        - cny成交额：exchange.amount_24h / (10^token.decimals)
-    - 24h成交量涨跌幅：exchange.change_24h
+- GET /minetoken/{tokenId}
+- 参数：
+  - tokenId
+- 返回数据：
+
+  - token 总发行量：token.total_supply / (10^token.decimals)
+  - token 合约地址：token.contract_address
+
+  - token 现价：exchange.price（单位 cny）
+  - 流动金池：
+    - CNY 流动金：exchange.cny_reserve /(10^token.decimals)
+    - token 流动金：exchange.token_reserve / (10^token.decimals)
+  - 24h 成交量
+    - token 成交量：exchange.volume_24h / (10^token.decimals)
+    - cny 成交额：exchange.amount_24h / (10^token.decimals)
+  - 24h 成交量涨跌幅：exchange.change_24h
+
 ```
 {
     "code": 0,
@@ -121,9 +127,12 @@ showToc: true
     }
 }
 ```
-### 查看用户发行的fan票
-* GET token/user/{userId}
-* 返回数据
+
+### 查看用户发行的 fan 票
+
+- GET token/user/{userId}
+- 返回数据
+
 ```
 {
     "code": 0,
@@ -145,15 +154,17 @@ showToc: true
 }
 ```
 
-### Fan票持仓列表
-* GET /token/{tokenId}/balances
-* 参数：
-    * pagesize 默认值 10
-    * page 默认值 1
-    * sort 排序方式
-        * amount-(desc|asc) 持仓量排序
-        * name-(desc|asc) 姓名排序
-* 返回数据
+### Fan 票持仓列表
+
+- GET /token/{tokenId}/balances
+- 参数：
+  - pagesize 默认值 10
+  - page 默认值 1
+  - sort 排序方式
+    - amount-(desc|asc) 持仓量排序
+    - name-(desc|asc) 姓名排序
+- 返回数据
+
 ```
 {
     "code": 0,
@@ -177,15 +188,18 @@ showToc: true
 ```
 
 ### 流动金持仓列表
-* GET /token/{tokenId}/liquidity/balances
-* 其他同【Fan票持仓列表】
 
-### Fan票流水列表
-* GET /token/{tokenId}/transactions
-* 参数：
-    * pagesize 默认值 10
-    * page 默认值 1
-* 返回数据
+- GET /token/{tokenId}/liquidity/balances
+- 其他同【Fan 票持仓列表】
+
+### Fan 票流水列表
+
+- GET /token/{tokenId}/transactions
+- 参数：
+  - pagesize 默认值 10
+  - page 默认值 1
+- 返回数据
+
 ```
 {
     "code": 0,
@@ -215,23 +229,27 @@ showToc: true
     }
 }
 ```
-### 流动金流水列表
-* GET /token/{tokenId}/liquidity/transactions
-* 其他同【Fan票流水列表】
 
-### fan票相关创作列表
-* GET /minetoken/{tokenId}/related
-* 参数： 
-    * page: 1
-    * pagesize: 10
-    * filter:
-        * 1: 持票可见
-        * 2: 付费可见
-        * 3: 持票可见 + 付费可见
-    * sort: 
-        * time-desc: 时间降序
-        * popular-desc: 热度降序
-* 返回数据：
+### 流动金流水列表
+
+- GET /token/{tokenId}/liquidity/transactions
+- 其他同【Fan 票流水列表】
+
+### fan 票相关创作列表
+
+- GET /minetoken/{tokenId}/related
+- 参数：
+  - page: 1
+  - pagesize: 10
+  - filter:
+    - 1: 持票可见
+    - 2: 付费可见
+    - 3: 持票可见 + 付费可见
+  - sort:
+    - time-desc: 时间降序
+    - popular-desc: 热度降序
+- 返回数据：
+
 ```
 {
     "code": 0,
@@ -271,14 +289,16 @@ showToc: true
 }
 ```
 
-### 查看我当前token的持仓
-* GET /minetoken/balance
-* 参数：
-    * tokenId
-* Headers
-    * x-access-token: 用户登录的accessToken
-* 返回数据
-    * 持仓量 = data / (10^token_decimals)
+### 查看我当前 token 的持仓
+
+- GET /minetoken/balance
+- 参数：
+  - tokenId
+- Headers
+  - x-access-token: 用户登录的 accessToken
+- 返回数据
+  - 持仓量 = data / (10^token_decimals)
+
 ```
 {
     "code": 0,
@@ -287,16 +307,19 @@ showToc: true
 }
 ```
 
-### Fan票转账
-![2020-06-19-16-04-13](images/2020-06-19-16-04-13.png)
-* POST /minetoken/transfer
-* Headers
-    * x-access-token: 用户登录的accessToken
-* request body
-    * tokenId:fan票id
-    * to: 转给的用户id
-    * amount: 转账数量
-    * memo: 转账留言
+### Fan 票转账
+
+![2020-06-19-16-04-13](/images/2020-06-19-16-04-13.png)
+
+- POST /minetoken/transfer
+- Headers
+  - x-access-token: 用户登录的 accessToken
+- request body
+  - tokenId:fan 票 id
+  - to: 转给的用户 id
+  - amount: 转账数量
+  - memo: 转账留言
+
 ```
 {
     "tokenId":14,
@@ -305,8 +328,10 @@ showToc: true
     "memo": "奥利给"
 }
 ```
-* 返回数据
-tx_hash为交易成功的链上hash
+
+- 返回数据
+  tx_hash 为交易成功的链上 hash
+
 ```
 {
     "code":0,
@@ -317,40 +342,47 @@ tx_hash为交易成功的链上hash
 }
 ```
 
-### CNY转账
-![2020-06-19-16-05-54](images/2020-06-19-16-05-54.png)
-* POST /asset/transfer
-* Headers
-    * x-access-token: 用户登录的accessToken
-* request body
+### CNY 转账
+
+![2020-06-19-16-05-54](/images/2020-06-19-16-05-54.png)
+
+- POST /asset/transfer
+- Headers
+  - x-access-token: 用户登录的 accessToken
+- request body
+
 ```
 {"symbol":"CNY","to":38,"amount":100}
 ```
-* 返回数据
+
+- 返回数据
+
 ```
 {"code":0,"message":"成功"}
 ```
 
-### 查看我所有fan票的交易日志记录
-* GET /token/allLogs
-* 参数：
-    * pagesize: 默认10（可选）
-    * page: 默认1（可选）
-    * type（可选）可选值如下
-        * mint: 增发,
-        * transfer: 转账,
-        * exchange_purchase: 交易所购买,
-        * exchange_addliquidity: 添加流动金',
-        * exchange_removeliquidity: 删除流动金,
-        * reward_article: 打赏文章,
-        * pay_article: 支付文章,
-* Headers
-    * x-access-token: 用户登录的accessToken
-* 返回数据
-    * post_id: 文章id
-    * title: 文章名
-    * cover: 文章封面
-    * memo: 交易memo
+### 查看我所有 fan 票的交易日志记录
+
+- GET /token/allLogs
+- 参数：
+  - pagesize: 默认 10（可选）
+  - page: 默认 1（可选）
+  - type（可选）可选值如下
+    - mint: 增发,
+    - transfer: 转账,
+    - exchange_purchase: 交易所购买,
+    - exchange_addliquidity: 添加流动金',
+    - exchange_removeliquidity: 删除流动金,
+    - reward_article: 打赏文章,
+    - pay_article: 支付文章,
+- Headers
+  - x-access-token: 用户登录的 accessToken
+- 返回数据
+  - post_id: 文章 id
+  - title: 文章名
+  - cover: 文章封面
+  - memo: 交易 memo
+
 ```
 {
     "code": 0,
@@ -385,17 +417,19 @@ tx_hash为交易成功的链上hash
 }
 ```
 
-### 查看我所有fan票的流动金日志记录
-* GET /token/allLiquidityLogs
-* 参数：
-    * pagesize: 默认10（可选）
-    * page: 默认1（可选）
-    * type（可选）可选值如下
-        * exchange_addliquidity: 添加流动金',
-        * exchange_removeliquidity: 删除流动金,
-* Headers
-    * x-access-token: 用户登录的accessToken
-* 返回数据
+### 查看我所有 fan 票的流动金日志记录
+
+- GET /token/allLiquidityLogs
+- 参数：
+  - pagesize: 默认 10（可选）
+  - page: 默认 1（可选）
+  - type（可选）可选值如下
+    - exchange_addliquidity: 添加流动金',
+    - exchange_removeliquidity: 删除流动金,
+- Headers
+  - x-access-token: 用户登录的 accessToken
+- 返回数据
+
 ```
 {
     "code": 0,
@@ -423,13 +457,15 @@ tx_hash为交易成功的链上hash
 }
 ```
 
-### 查看fan票历史价格
-* GET /history/price?tokenId=14
-* 参数：
-    * tokenId
-* 返回数据
-    * obj: 价格的对象形式
-    * arr: 价格的数组形式
+### 查看 fan 票历史价格
+
+- GET /history/price?tokenId=14
+- 参数：
+  - tokenId
+- 返回数据
+  - obj: 价格的对象形式
+  - arr: 价格的数组形式
+
 ```
 {
     "code": 0,

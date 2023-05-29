@@ -3,12 +3,14 @@
 ## 交易
 
 ### 我的交易流水
-* GET /token/myPurchaseLogs
-* 参数：
-    * tokenId
-* Headers
-    * x-access-token: 用户登录的accessToken
-* 返回数据
+
+- GET /token/myPurchaseLogs
+- 参数：
+  - tokenId
+- Headers
+  - x-access-token: 用户登录的 accessToken
+- 返回数据
+
 ```
 {
     "code":0,
@@ -34,11 +36,14 @@
     ]
 }
 ```
+
 ### 全部交易流水
-* GET /token/purchaseLogs
-* 参数：
-    * tokenId
-* 返回数据：只返回最近的100条
+
+- GET /token/purchaseLogs
+- 参数：
+  - tokenId
+- 返回数据：只返回最近的 100 条
+
 ```
 {
     "code":0,
@@ -69,10 +74,12 @@
 ## 流动金
 
 ### 全部流水金流水
-* GET /token/liquidityLogs
-* 参数：
-    * tokenId
-* 返回数据
+
+- GET /token/liquidityLogs
+- 参数：
+  - tokenId
+- 返回数据
+
 ```
 {
     "code":0,
@@ -102,12 +109,14 @@
 ```
 
 ### 我的流动金流水
-* GET /token/myLiquidityLogs
-* 参数：
-    * tokenId
-* Headers
-    * x-access-token: 用户登录的accessToken
-* 返回数据
+
+- GET /token/myLiquidityLogs
+- 参数：
+  - tokenId
+- Headers
+  - x-access-token: 用户登录的 accessToken
+- 返回数据
+
 ```
 {
     "code":0,
@@ -137,13 +146,15 @@
 ```
 
 ### 以输入为准计算输出
-* GET /exchange/outputAmount
-* 参数
-    * inputTokenId （⚠️CNY的话为0）
-    * outputTokenId ️️️（⚠️不能和inputTokenId相同）
-    * inputAmount （⚠️= inputValue * (10^token_decimals)）
-* 返回数据：
-    * ⚠️outputAmount = res.data / (10^token_decimals)
+
+- GET /exchange/outputAmount
+- 参数
+  - inputTokenId （⚠️CNY 的话为 0）
+  - outputTokenId ️️️（⚠️ 不能和 inputTokenId 相同）
+  - inputAmount （⚠️= inputValue \* (10^token_decimals)）
+- 返回数据：
+  - ⚠️outputAmount = res.data / (10^token_decimals)
+
 ```
 {
     "code":0,
@@ -153,14 +164,16 @@
 ```
 
 ### 以输出为准计算输入
-* GET /exchange/inputAmount
-* 参数
-* 参数
-    * inputTokenId （⚠️CNY的话为0）
-    * outputTokenId ️️️（⚠️不能和inputTokenId相同）
-    * outputAmount （⚠️= outputValue * (10^token_decimals)）
-* 返回数据：
-    * ⚠️inputAmount = res.data / (10^token_decimals)
+
+- GET /exchange/inputAmount
+- 参数
+- 参数
+  - inputTokenId （⚠️CNY 的话为 0）
+  - outputTokenId ️️️（⚠️ 不能和 inputTokenId 相同）
+  - outputAmount （⚠️= outputValue \* (10^token_decimals)）
+- 返回数据：
+  - ⚠️inputAmount = res.data / (10^token_decimals)
+
 ```
 {
     "code":0,
@@ -169,23 +182,26 @@
 }
 ```
 
-### 查看用户CNY余额
-* GET /asset/balance
-* 参数：
-    * symbol：CNY
-* Headers
-    * x-access-token: 用户登录的accessToken
+### 查看用户 CNY 余额
 
-* 返回数据为用户余额 （⚠️balance = res / (10^4)）
+- GET /asset/balance
+- 参数：
+  - symbol：CNY
+- Headers
 
+  - x-access-token: 用户登录的 accessToken
 
-### 添加流动金：根据输入CNY计算输出token
-* GET /exchange/poolCnyToTokenPrice
-* 参数
-    * outputTokenId： 输出token的id
-    * inputAmount： 输入cny的数量（⚠️inputAmount = inputValue * (10^4)）
-* 返回数据
-    * ⚠️outputAmount = res.data / (10^token_decimals)
+- 返回数据为用户余额 （⚠️balance = res / (10^4)）
+
+### 添加流动金：根据输入 CNY 计算输出 token
+
+- GET /exchange/poolCnyToTokenPrice
+- 参数
+  - outputTokenId： 输出 token 的 id
+  - inputAmount： 输入 cny 的数量（⚠️inputAmount = inputValue \* (10^4)）
+- 返回数据
+  - ⚠️outputAmount = res.data / (10^token_decimals)
+
 ```
 {
     "code":0,
@@ -194,14 +210,17 @@
 }
 ```
 
-### 添加流动金：计算用户挖到的token流动金凭证
-![2020-06-12-11-25-51](images/2020-06-12-11-25-51.png)
-* GET /exchange/userMintToken
-* 参数：
-    * tokenId
-    * amount：输入cny的数量（⚠️inputAmount = inputValue * (10^4)）
-* 返回数据
-    * ⚠️token流动金凭证 = res.data / (10^token_decimals)
+### 添加流动金：计算用户挖到的 token 流动金凭证
+
+![2020-06-12-11-25-51](/images/2020-06-12-11-25-51.png)
+
+- GET /exchange/userMintToken
+- 参数：
+  - tokenId
+  - amount：输入 cny 的数量（⚠️inputAmount = inputValue \* (10^4)）
+- 返回数据
+  - ⚠️token 流动金凭证 = res.data / (10^token_decimals)
+
 ```
 {
     "code":0,
@@ -210,15 +229,18 @@
 }
 ```
 
-### 删除流动金：根据token凭证数量计算输出
-![2020-06-12-11-29-21](images/2020-06-12-11-29-21.png)
-* GET /exchange/outputPoolSize
-* 参数：
-    * tokenId
-    * amount：输入cny的数量（⚠️inputAmount = inputValue * (10^4)）
-* 返回数据：
-    * cny_amount：token凭证对应的cny数量（⚠️ 显示 = cny_amount * (10^4)）
-    * token_amount：token凭证对应的token数量（⚠️页面显示 = token_amount * (10^token_decimals)）
+### 删除流动金：根据 token 凭证数量计算输出
+
+![2020-06-12-11-29-21](/images/2020-06-12-11-29-21.png)
+
+- GET /exchange/outputPoolSize
+- 参数：
+  - tokenId
+  - amount：输入 cny 的数量（⚠️inputAmount = inputValue \* (10^4)）
+- 返回数据：
+  - cny_amount：token 凭证对应的 cny 数量（⚠️ 显示 = cny_amount \* (10^4)）
+  - token_amount：token 凭证对应的 token 数量（⚠️ 页面显示 = token_amount \* (10^token_decimals)）
+
 ```
 {
     "code":0,
@@ -231,8 +253,10 @@
 ```
 
 ### 删除流动金
-* POST /exchange/removeLiquidity
-* request body
+
+- POST /exchange/removeLiquidity
+- request body
+
 ```
 {
     "tokenId":14,
@@ -241,7 +265,9 @@
     "min_tokens":30438.625479452054
 }
 ```
-* 返回数据
+
+- 返回数据
+
 ```
 {"code":0,"message":"成功","data":0}
 ```
