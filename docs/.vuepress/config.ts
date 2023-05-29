@@ -2,6 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from 'vuepress'
 
 export default defineUserConfig({
+  base: '/documentation/',
   lang: 'zh-CN',
   title: 'Matataki',
   description: 'Matataki 相关文档',
