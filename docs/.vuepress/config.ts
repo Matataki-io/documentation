@@ -13,6 +13,14 @@ export default defineUserConfig({
         link: '/',
       },
       {
+        text: '介绍',
+        link: '/guide',
+      },
+      {
+        text: '开发指南',
+        link: '/development',
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/Matataki-io/matataki-frontend',
       },
@@ -37,6 +45,16 @@ export default defineUserConfig({
                 '/guide/cryptohero.md',
               ],
             },
+          ],
+        },
+      ],
+      '/development/': [
+        {
+          text: '开发指南',
+          children: [
+            '/development/README.md',
+            '/development/front-end.md',
+            '/development/backend.md',
           ],
         },
       ],

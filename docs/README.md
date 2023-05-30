@@ -3,11 +3,11 @@ home: true
 title: Home
 heroImage: /images/hero.png
 actions:
-  - text: Get Started
+  - text: 介绍
     link: /guide/index.html
     type: primary
-  - text: Introduction
-    link: /guide/
+  - text: 开发指南
+    link: /development/index.html
     type: secondary
 features:
   - title: 永久保存 ——只管放心发表
