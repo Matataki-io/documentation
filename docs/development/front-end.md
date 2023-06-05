@@ -6,7 +6,7 @@ This document provides information about the project's development environment s
 
 First, make sure that you have the following installed on your machine:
 
-- Node.js (version 16.19.1 or later)
+- Node.js (version 16.19.1)
 
 > Because the project has a long history, the higher version cannot be started normally.
 
@@ -119,7 +119,7 @@ yarn start-prod
 
 此命令将在生产模式下启动应用程序。
 
-## 更多信息
+## Other content
 
 请参阅项目的其他文档和代码注释，以了解更多关于项目的详细信息和特定功能的使用方法。
 
