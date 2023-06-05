@@ -1,29 +1,21 @@
-# 前端指南 - 项目开发文档
+# Front-end development documentation
 
-本文档提供了有关项目的开发环境设置、依赖安装、项目启动和部署等相关信息。
+This document provides information about the project's development environment setup, dependency installation, project startup, and deployment.
 
-## 环境要求
+## Prerequisites
 
-确保满足以下环境要求：
+First, make sure that you have the following installed on your machine:
 
-- Node.js 版本: v16.19.1
+- Node.js (version 16.19.1 or later)
 
-> 因为项目历史悠久，高版本无法正常启动。
+> Because the project has a long history, the higher version cannot be started normally.
 
-## 相关资源
+## Related resources
 
 - [Nuxt2](https://v2.nuxt.com/)
 - [Vue2](https://v2.vuejs.org/)
 
-## 项目拉取
-
-通过以下命令克隆项目代码到本地：
-
-```bash
-git clone https://github.com/Matataki-io/matataki-frontend.git
-```
-
-## 环境变量配置
+## Environment variable configuration
 
 项目使用环境变量来配置一些敏感信息或特定配置项。请按照以下步骤进行环境变量配置：
 
@@ -90,27 +82,20 @@ git clone https://github.com/Matataki-io/matataki-frontend.git
 
 请注意，.env 文件应该被添加到 .gitignore 文件中，以确保敏感信息不会被提交到代码库中。但是我们这里使用的是 env.js 不需要忽略。
 
-## 依赖安装
+## Installation
 
-在项目根目录执行以下命令安装项目依赖：
-
-```bash
-yarn install
-```
-
-此命令将根据项目的 package.json 文件安装所需的依赖项。
-
-## 项目启动
-
-运行以下命令启动项目：
+1. Clone the repository to your local machine.
 
 ```bash
-yarn dev
+git clone https://github.com/Matataki-io/matataki-frontend.git
 ```
 
-此命令将启动项目，并在开发模式下监听文件更改，实时更新应用程序。
+2. Run ``yarn`` in the project directory to install the necessary dependencies.
+3. Modify env.js environment variables.
+4. Start the development server by running ``yarn dev``.
+5. Finally, visit http://localhost:3000 to see the website.
 
-## Nuxt 项目部署
+## Project deployment
 
 如果你的项目是基于 Nuxt.js 构建的，并且需要部署到生产环境，可以按照以下步骤进行部署：
 

@@ -13,7 +13,7 @@ First, make sure that you have the following installed on your machine:
 > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 > ```
 
-## related resources
+## Related resources
 
 - [eggjs](https://www.eggjs.org)
 - [eggjs 2.x](https://github.com/eggjs/egg/blob/2.x/site/docs/index.zh-CN.md)
@@ -69,12 +69,12 @@ config.redis = {
 2. Run ``yarn`` in the project directory to install the necessary dependencies.
 3. Spin up required services with ``docker-compose up -d``
     - Note: In addition to postgres and redis, this will also run ipfs service
-4. 通过创建 config/config.local.js
+4. By creating config/config.local.js
 5. Start the development server by running ``yarn dev``.
 6. Finally, visit http://localhost:7001 to see the website.
 
 
-## 项目部署
+## Project deployment
 
 要部署Egg.js项目，你可以使用不同的方式，例如使用PM2、Docker等。以下是一种常见的部署方法：
 
