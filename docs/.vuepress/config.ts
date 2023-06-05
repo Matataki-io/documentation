@@ -55,6 +55,8 @@ export default defineUserConfig({
             '/development/README.md',
             '/development/front-end.md',
             '/development/backend.md',
+            '/development/contributing.md',
+            '/development/sponsors.md',
           ],
         },
       ],

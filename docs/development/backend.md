@@ -1,18 +1,27 @@
-# 后端开发文档
+# Backend Development Documentation
 
-## 环境要求
+## Prerequisites
 
-- Node.js 版本 v16.19.1 或更高版本
+First, make sure that you have the following installed on your machine:
 
-## 相关资源
+- Node.js (version 16.19.1 or later)
+- Docker (for running the database)
+
+> We recommend you have installed nvm in order to set the right node version to run this project
+>
+> ```
+> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+> ```
+
+## related resources
 
 - [eggjs](https://www.eggjs.org)
 - [eggjs 2.x](https://github.com/eggjs/egg/blob/2.x/site/docs/index.zh-CN.md)
 
 
-## 环境变量配置
+## Environment variable configuration
 
-在项目目录创建一个 config/config.local.js 文件，并按需配置环境变量：
+Create a config/config.local.js file in the project directory and configure environment variables as needed:
 
 ```javascript
 /**
@@ -54,15 +63,15 @@ config.redis = {
 };
 ```
 
-## 依赖安装
+## Installation
 
-1. 将存储库克隆到本地计算机。
-2. 在项目目录中运行 yarn 以安装必要的依赖项。
-3. 使用 docker-compose up -d 启动所需的服务
-    - 注意：除了 mysql5.7 和 redis，还有 IPFS 相关服务
+1. Clone the repository to your local machine.
+2. Run ``yarn`` in the project directory to install the necessary dependencies.
+3. Spin up required services with ``docker-compose up -d``
+    - Note: In addition to postgres and redis, this will also run ipfs service
 4. 通过创建 config/config.local.js
-5. 通过运行 yarn dev 启动开发服务器。
-6. 最后，访问 http://localhost:7001 查看网站。
+5. Start the development server by running ``yarn dev``.
+6. Finally, visit http://localhost:7001 to see the website.
 
 
 ## 项目部署
