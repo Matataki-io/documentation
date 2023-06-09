@@ -52,6 +52,12 @@ To modify the project's configuration options, you can follow these steps:
 
     - Additionally, some configuration options have default values set according to the requirements of Docker Compose. However, it is still recommended to review and adjust these values based on your specific needs.
 
+3. If you are using Docker Compose's pre-configured service, set the corresponding host to the IP address of your local machine (for example, 127.0.0.1) in the configuration environment variable.
+    - mysql_local
+    - redis_local
+    - elasticsearch_local
+    - ipfs_local
+
 
 ## Run with docker-compose
 
