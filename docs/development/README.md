@@ -9,3 +9,8 @@
 在部署相关内容中，我们将详细介绍如何将 Matataki 项目部署到不同的环境中，包括开发环境、测试环境和生产环境。您将了解到如何配置服务器、域名和 SSL 证书，以及如何进行持续集成和自动化部署。我们将提供逐步的部署指南和最佳实践，确保您能够顺利将 Matataki 项目发布到线上环境，为用户提供稳定可靠的服务。
 
 无论您是初学者还是有丰富经验的开发者，本文档都将为您提供清晰而详尽的指导，帮助您掌握 Matataki 项目的开发和部署流程。让我们一同探索 Matataki 项目的精彩世界吧！
+
+## Repo
+- [Documentation](https://github.com/Matataki-io/documentation)
+- [Frontend](https://github.com/Matataki-io/matataki-frontend)
+- [Backend](https://github.com/Matataki-io/matataki-backend)

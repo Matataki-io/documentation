@@ -9,26 +9,26 @@ export default defineUserConfig({
   theme: defaultTheme({
     navbar: [
       {
-        text: '首页',
+        text: 'Home',
         link: '/',
       },
       {
-        text: '介绍',
+        text: 'Guide',
         link: '/guide',
       },
       {
-        text: '开发指南',
+        text: 'Development guide',
         link: '/development',
       },
       {
         text: 'GitHub',
-        link: 'https://github.com/Matataki-io/matataki-frontend',
+        link: 'https://github.com/Matataki-io/documentation',
       },
     ],
     sidebar: {
       '/guide/': [
         {
-          text: '指南',
+          text: 'Guide',
           children: [
             '/guide/README.md',
             '/guide/auth.md',
@@ -50,7 +50,7 @@ export default defineUserConfig({
       ],
       '/development/': [
         {
-          text: '开发指南',
+          text: 'Development guide',
           children: [
             '/development/README.md',
             '/development/front-end.md',

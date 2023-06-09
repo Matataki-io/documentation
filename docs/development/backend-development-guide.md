@@ -81,8 +81,8 @@ docker compose up -d
     ```
 
 
-2. Start the development server by running ``yarn dev``.
-3. Finally, visit http://localhost:7001 to see the website.
+3. Start the development server by running ``yarn dev``.
+4. Finally, visit http://localhost:7001 to see the website.
 
 ## Check the status of the services
 
