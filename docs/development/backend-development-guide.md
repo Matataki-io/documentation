@@ -38,6 +38,24 @@ git clone https://github.com/Matataki-io/matataki-backend.git
 cd matataki-backend
 ```
 
+## Run with docker-compose
+
+```bash
+docker compose up -d
+```
+
+> 1. If you are using the Mac OS (M series) operating system.
+>       - You may encounter problems like `no matching manifest for linux/arm64/v8 in the manifest list entries`. To solve this problem, you can consider replacing the image. For example, you could try using a [biarms/mysql:5.7-beta-circleci
+](https://hub.docker.com/layers/biarms/mysql/5.7.33-beta-circleci/images/sha256-70508b9c4b53d3598dabf6a11c68ceaf489c8d8e379d01f3b7c9e025d104840d?context=explore) image.
+
+```bash
+⠿ Network matataki-backend_default  Created
+⠿ Container mysql_local             Started
+⠿ Container elasticsearch_local     Started
+⠿ Container redis_local             Started
+⠿ Container ipfs_local              Started
+```
+
 ## Environment variable configuration
 
 To modify the project's configuration options, you can follow these steps:
@@ -52,18 +70,11 @@ To modify the project's configuration options, you can follow these steps:
 
     - Additionally, some configuration options have default values set according to the requirements of Docker Compose. However, it is still recommended to review and adjust these values based on your specific needs.
 
-3. If you are using Docker Compose's pre-configured service, set the corresponding host to the IP address of your local machine (for example, 127.0.0.1) in the configuration environment variable.
-    - mysql_local
-    - redis_local
-    - elasticsearch_local
-    - ipfs_local
-
-
-## Run with docker-compose
-
-```bash
-docker compose up -d
-```
+3. If you are using Docker Compose's pre-configured service, set the corresponding `host` to the IP address of your local machine (for example, `127.0.0.1`) in the configuration environment variable.
+    - `mysql_local`
+    - `redis_local`
+    - `elasticsearch_local`
+    - `ipfs_local`
 
 ## Start project
 
@@ -80,20 +91,22 @@ docker compose up -d
     $ node ./scripts/database/init.js
     Connect to mysql_local:3306...
     Connected to mysql_local:3306
-    Read SQL file /usr/src/app/database/db-dump.sql...
-    Query SQL file /usr/src/app/database/db-dump.sql...
-    Query SQL file /usr/src/app/database/db-dump.sql done
+    Read SQL file /matataki-backend/database/db-dump.sql...
+    Query SQL file /matataki-backend/database/db-dump.sql...
+    Query SQL file /matataki-backend/database/db-dump.sql done
     Done in 0.96s.
     ```
 
+    > If you need to execute the database initialization script, set the `mysql` `host` in `config.default` to the IP address of the local machine (for example, `127.0.0.1`) when configuring the environment variables. Doing so ensures that the script runs correctly on the local database.
+
 
 3. Start the development server by running ``yarn dev``.
-4. Finally, visit http://localhost:7001 to see the website.
+4. Finally, visit [http://localhost:7001](http://localhost:7001) to see the website.
 
 ## Check the status of the services
 
-Exposes `7001` as the default port for the backend service. You can check the status of the backend service by visiting `http://localhost:7001/` in your browser, it should return a text message like `hi, egg, version=1.6.8, undefined`.
+Exposes `7001` as the default port for the backend service. You can check the status of the backend service by visiting [http://localhost:7001](http://localhost:7001) in your browser, it should return a text message like `hi, egg, version=1.6.8, undefined`.
 
-Visiting `http://localhost:7001/posts/timeRanking` can check if you are initializing the database successfully, it should return a JSON message like `{"code":0,"message":"成功","data":{"count":0,"list":[]}}`.
+Visiting [http://localhost:7001/posts/timeRanking](http://localhost:7001/posts/timeRanking) can check if you are initializing the database successfully, it should return a JSON message like `{"code":0,"message":"成功","data":{"count":0,"list":[]}}`.
 
 Once the backend service is up and running, you are all done with the start.

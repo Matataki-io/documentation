@@ -80,8 +80,8 @@ Done in 0.96s.
 
 ## Check the status of the services
 
-Docker Compose exposes `7001` as the default port for the backend service. You can check the status of the backend service by visiting `http://localhost:7001/` in your browser, it should return a text message like `hi, egg, version=1.6.8, undefined`.
+Docker Compose exposes `7001` as the default port for the backend service. You can check the status of the backend service by visiting [http://localhost:7001](http://localhost:7001) in your browser, it should return a text message like `hi, egg, version=1.6.8, undefined`.
 
-Visiting `http://localhost:7001/posts/timeRanking` can check if you are initializing the database successfully, it should return a JSON message like `{"code":0,"message":"成功","data":{"count":0,"list":[]}}`.
+Visiting [http://localhost:7001/posts/timeRanking](http://localhost:7001/posts/timeRanking) can check if you are initializing the database successfully, it should return a JSON message like `{"code":0,"message":"成功","data":{"count":0,"list":[]}}`.
 
 Once the backend service is up and running, you are all done with the deployment.
