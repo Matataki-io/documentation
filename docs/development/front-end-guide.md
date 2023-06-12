@@ -15,19 +15,28 @@ First, make sure that you have the following installed on your machine:
 - [Nuxt2](https://v2.nuxt.com/)
 - [Vue2](https://v2.vuejs.org/)
 
+## Clone this repository and join the folder
+
+1. Clone the repository to your local machine.
+
+```bash
+git clone https://github.com/Matataki-io/matataki-frontend.git
+
+cd matataki-frontend
+```
+
 ## Environment variable configuration
 
-项目使用环境变量来配置一些敏感信息或特定配置项。请按照以下步骤进行环境变量配置：
+Projects use environment variables to configure some sensitive information or specific configuration items. Follow the steps below to configure environment variables:
 
-1. 在项目根目录创建一个名为 env.js 的文件。
-2. 打开 env.js 文件，并按照需要设置以下环境变量：
+1. Open the env.js file and set the following environment variables as required:
 
 ```javascript
 {
   // ENV
   NODE: 'development',
   NODE_ENV: 'development',
-  // API Url
+  // @required API Url
   VUE_APP_API: 'https://apitest.mttk.net',
   // Auth API
   VUE_APP_MATATAKIAUTH_API: 'https://auth.meta.io/apitest',
@@ -40,7 +49,7 @@ First, make sure that you have the following installed on your machine:
   VUE_APP_URL: 'https://test.meta.io',
   // Ontology scriptHash
   VUE_APP_SCRIPT_HASH: '36df9722fc0ff5fa3979f2a844a012cabe1d4c56',
-  // Auth Github
+  // @important Auth Github
   VUE_APP_GITHUB_CLIENT_ID: '889e6eafa77e2e87a08c',
   // OSS Url
   ssImgAddress: 'https://smartsignature-img.oss-cn-hongkong.aliyuncs.com',
@@ -78,53 +87,27 @@ First, make sure that you have the following installed on your machine:
 }
 ```
 
-3. 保存并关闭 env.js 文件。
+## Start project
 
-请注意，.env 文件应该被添加到 .gitignore 文件中，以确保敏感信息不会被提交到代码库中。但是我们这里使用的是 env.js 不需要忽略。
-
-## Installation
-
-1. Clone the repository to your local machine.
-
-```bash
-git clone https://github.com/Matataki-io/matataki-frontend.git
-```
-
-2. Run ``yarn`` in the project directory to install the necessary dependencies.
-3. Modify env.js environment variables.
-4. Start the development server by running ``yarn dev``.
-5. Finally, visit http://localhost:3000 to see the website.
+1. Run `yarn` in the project directory to install the necessary dependencies.
+2. Modify env.js environment variables.
+3. Start the development server by running `yarn dev`.
+4. Finally, visit [http://localhost:3000](http://localhost:3000) to see the website.
 
 ## Project deployment
 
-如果你的项目是基于 Nuxt.js 构建的，并且需要部署到生产环境，可以按照以下步骤进行部署：
+If your project is built on Nuxt.js and needs to be deployed to a production environment, follow these steps:
 
-1. 构建项目：
+1. Build the project:
 
 ```bash
 yarn build-prod
 ```
 
-此命令将在项目目录中生成构建文件，可以通过任何支持托管的服务进行部署。
-
-2. 将生成的文件部署到目标服务器或托管平台。
-
-3. 配置服务器或托管平台，确保服务器环境满足 Nuxt.js 的要求，并配置适当的路由规则。
-
-4. 启动应用程序：
+2. To launch the application:
 
 ```bash
 yarn start-prod
 ```
 
-此命令将在生产模式下启动应用程序。
-
-## Other content
-
-请参阅项目的其他文档和代码注释，以了解更多关于项目的详细信息和特定功能的使用方法。
-
-如果需要进一步的帮助或有任何疑问，请随时联系我们的开发团队。
-
-祝您开发愉快！
-
-> 注意：以上步骤仅作为示例，具体的操作步骤可能因项目而异。请根据项目实际情况进行调整和修改。
+3. Visit [http://localhost:3000](http://localhost:3000) to see the website.

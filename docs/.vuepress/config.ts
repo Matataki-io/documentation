@@ -53,7 +53,7 @@ export default defineUserConfig({
           text: 'Development guide',
           children: [
             '/development/README.md',
-            '/development/front-end.md',
+            '/development/front-end-guide.md',
             '/development/backend-development-guide.md',
             '/development/backend-deployment-guide.md',
             '/development/contributing.md',
