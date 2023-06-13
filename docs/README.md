@@ -3,10 +3,10 @@ home: true
 title: Home
 heroImage: /images/hero.png
 actions:
-  - text: 介绍
+  - text: Introduction
     link: /guide/index.html
     type: primary
-  - text: 开发指南
+  - text: Development guide
     link: /development/index.html
     type: secondary
 features:
@@ -21,7 +21,7 @@ features:
 footer: MIT Licensed | Copyright © 2018-present Matataki
 ---
 
-### 贡献文档
+### Contribution
 
 <CodeGroup>
   <CodeGroupItem title="PNPM" active>

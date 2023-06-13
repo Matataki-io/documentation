@@ -5,7 +5,7 @@ export default defineUserConfig({
   base: '/documentation/',
   lang: 'zh-CN',
   title: 'Matataki',
-  description: 'Matataki 相关文档',
+  description: 'Matataki documentation',
   theme: defaultTheme({
     navbar: [
       {
@@ -14,11 +14,11 @@ export default defineUserConfig({
       },
       {
         text: 'Guide',
-        link: '/guide',
+        link: '/guide/index.html',
       },
       {
         text: 'Development guide',
-        link: '/development',
+        link: '/development/index.html',
       },
       {
         text: 'GitHub',
