@@ -1,0 +1,1 @@
+import{_ as t,o as a,c as o,b as e,d as r}from"./app-b939c1ec.js";const c={},s=e("h1",{id:"编辑器模块",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#编辑器模块","aria-hidden":"true"},"#"),r(" 编辑器模块")],-1),d=[s];function n(_,i){return a(),o("div",null,d)}const l=t(c,[["render",n],["__file","editor.html.vue"]]);export{l as default};

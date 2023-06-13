@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.62">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title>订单系统 | Matataki</title><meta name="description" content="Matataki documentation">
+    <link rel="preload" href="/documentation/assets/style-71543cb8.css" as="style"><link rel="stylesheet" href="/documentation/assets/style-71543cb8.css">
+    <link rel="modulepreload" href="/documentation/assets/app-b939c1ec.js"><link rel="modulepreload" href="/documentation/assets/order.html-b4197d69.js"><link rel="modulepreload" href="/documentation/assets/order.html-a69bc186.js"><link rel="prefetch" href="/documentation/assets/index.html-cd838239.js" as="script"><link rel="prefetch" href="/documentation/assets/index.html-0c64aa60.js" as="script"><link rel="prefetch" href="/documentation/assets/backend-deployment-guide.html-454397a2.js" as="script"><link rel="prefetch" href="/documentation/assets/backend-development-guide.html-6ee34715.js" as="script"><link rel="prefetch" href="/documentation/assets/contributing.html-60c3b9c5.js" as="script"><link rel="prefetch" href="/documentation/assets/front-end-guide.html-52afa5c0.js" as="script"><link rel="prefetch" href="/documentation/assets/sponsors.html-db7ceb98.js" as="script"><link rel="prefetch" href="/documentation/assets/index.html-7087c748.js" as="script"><link rel="prefetch" href="/documentation/assets/airdrop.html-f42effc0.js" as="script"><link rel="prefetch" href="/documentation/assets/article.html-73407842.js" as="script"><link rel="prefetch" href="/documentation/assets/auth.html-744c6fa8.js" as="script"><link rel="prefetch" href="/documentation/assets/cryptohero.html-9600c561.js" as="script"><link rel="prefetch" href="/documentation/assets/editor.html-9d64e96a.js" as="script"><link rel="prefetch" href="/documentation/assets/exchange.html-d12c10f3.js" as="script"><link rel="prefetch" href="/documentation/assets/fanpiao.html-bedd737f.js" as="script"><link rel="prefetch" href="/documentation/assets/lbs.html-7cd040f2.js" as="script"><link rel="prefetch" href="/documentation/assets/404.html-f9875e7b.js" as="script"><link rel="prefetch" href="/documentation/assets/index.html-da5f5fc7.js" as="script"><link rel="prefetch" href="/documentation/assets/index.html-49964a40.js" as="script"><link rel="prefetch" href="/documentation/assets/backend-deployment-guide.html-46d859ef.js" as="script"><link rel="prefetch" href="/documentation/assets/backend-development-guide.html-339cc2a0.js" as="script"><link rel="prefetch" href="/documentation/assets/contributing.html-c260840b.js" as="script"><link rel="prefetch" href="/documentation/assets/front-end-guide.html-acd6f1ca.js" as="script"><link rel="prefetch" href="/documentation/assets/sponsors.html-ab7f7bea.js" as="script"><link rel="prefetch" href="/documentation/assets/index.html-c48c1873.js" as="script"><link rel="prefetch" href="/documentation/assets/airdrop.html-2011d9fd.js" as="script"><link rel="prefetch" href="/documentation/assets/article.html-e2a76a37.js" as="script"><link rel="prefetch" href="/documentation/assets/auth.html-875203c0.js" as="script"><link rel="prefetch" href="/documentation/assets/cryptohero.html-96a838c6.js" as="script"><link rel="prefetch" href="/documentation/assets/editor.html-85c093bd.js" as="script"><link rel="prefetch" href="/documentation/assets/exchange.html-543b1d13.js" as="script"><link rel="prefetch" href="/documentation/assets/fanpiao.html-568c83ab.js" as="script"><link rel="prefetch" href="/documentation/assets/lbs.html-61f958c6.js" as="script"><link rel="prefetch" href="/documentation/assets/404.html-5bcdb387.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/documentation/" class=""><!----><span class="site-name">Matataki</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><nav class="navbar-items can-hide"><!--[--><div class="navbar-item"><a href="/documentation/" class="" aria-label="Home"><!--[--><!--]--> Home <!--[--><!--]--></a></div><div class="navbar-item"><a href="/documentation/guide/index.html" class="" aria-label="Guide"><!--[--><!--]--> Guide <!--[--><!--]--></a></div><div class="navbar-item"><a href="/documentation/development/index.html" class="" aria-label="Development guide"><!--[--><!--]--> Development guide <!--[--><!--]--></a></div><div class="navbar-item"><a class="external-link" href="https://github.com/Matataki-io/documentation" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-color-mode-button" title="toggle color mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><nav class="navbar-items"><!--[--><div class="navbar-item"><a href="/documentation/" class="" aria-label="Home"><!--[--><!--]--> Home <!--[--><!--]--></a></div><div class="navbar-item"><a href="/documentation/guide/index.html" class="" aria-label="Guide"><!--[--><!--]--> Guide <!--[--><!--]--></a></div><div class="navbar-item"><a href="/documentation/development/index.html" class="" aria-label="Development guide"><!--[--><!--]--> Development guide <!--[--><!--]--></a></div><div class="navbar-item"><a class="external-link" href="https://github.com/Matataki-io/documentation" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><p tabindex="0" class="sidebar-item sidebar-heading active">Guide <!----></p><ul style="" class="sidebar-item-children"><!--[--><li><a href="/documentation/guide/" class="router-link-active sidebar-item" aria-label="介绍"><!--[--><!--]--> 介绍 <!--[--><!--]--></a><!----></li><li><a href="/documentation/guide/auth.html" class="sidebar-item" aria-label="账号系统"><!--[--><!--]--> 账号系统 <!--[--><!--]--></a><!----></li><li><a href="/documentation/guide/article.html" class="sidebar-item" aria-label="文章系统"><!--[--><!--]--> 文章系统 <!--[--><!--]--></a><!----></li><li><a href="/documentation/guide/fanpiao.html" class="sidebar-item" aria-label="Fan 票系统"><!--[--><!--]--> Fan 票系统 <!--[--><!--]--></a><!----></li><li><a href="/documentation/guide/exchange.html" class="sidebar-item" aria-label="交易所系统"><!--[--><!--]--> 交易所系统 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/documentation/guide/order.html" class="router-link-active router-link-exact-active router-link-active sidebar-item active" aria-label="订单系统"><!--[--><!--]--> 订单系统 <!--[--><!--]--></a><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/documentation/guide/order.html#创建订单" class="router-link-active router-link-exact-active sidebar-item" aria-label="创建订单"><!--[--><!--]--> 创建订单 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/documentation/guide/order.html#根据订单号获取订单数据" class="router-link-active router-link-exact-active sidebar-item" aria-label="根据订单号获取订单数据"><!--[--><!--]--> 根据订单号获取订单数据 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/documentation/guide/order.html#修改订单是否使用余额支付" class="router-link-active router-link-exact-active sidebar-item" aria-label="修改订单是否使用余额支付"><!--[--><!--]--> 修改订单是否使用余额支付 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/documentation/guide/order.html#订单微信支付" class="router-link-active router-link-exact-active sidebar-item" aria-label="订单微信支付"><!--[--><!--]--> 订单微信支付 <!--[--><!--]--></a><!----></li><!--]--></ul></li><li><a href="/documentation/guide/editor.html" class="sidebar-item" aria-label="编辑器模块"><!--[--><!--]--> 编辑器模块 <!--[--><!--]--></a><!----></li><li><p tabindex="0" class="sidebar-item">第三方应用 <!----></p><ul style="" class="sidebar-item-children"><!--[--><li><a href="/documentation/guide/airdrop.html" class="sidebar-item" aria-label="DAPP-空投"><!--[--><!--]--> DAPP-空投 <!--[--><!--]--></a><!----></li><li><a href="/documentation/guide/lbs.html" class="sidebar-item" aria-label="LBS 社交"><!--[--><!--]--> LBS 社交 <!--[--><!--]--></a><!----></li><li><a href="/documentation/guide/cryptohero.html" class="sidebar-item" aria-label="NFT 拍卖"><!--[--><!--]--> NFT 拍卖 <!--[--><!--]--></a><!----></li><!--]--></ul></li><!--]--></ul></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><!--]--><div><h1 id="订单系统" tabindex="-1"><a class="header-anchor" href="#订单系统" aria-hidden="true">#</a> 订单系统</h1><h3 id="创建订单" tabindex="-1"><a class="header-anchor" href="#创建订单" aria-hidden="true">#</a> 创建订单</h3><ul><li>PUT /orders</li><li>Request Body <ul><li>useBalance: 是否使用余额支付，0 or 1</li><li>items： Array <ul><li>type： 创建订单的类型 <ul><li>buy_token_input：以输入为准交易</li><li>buy_token_output：以输出为准交易</li><li>add: 添加流动金</li></ul></li></ul></li></ul></li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>{
+    &quot;useBalance&quot;:0,
+    &quot;items&quot;:[
+        {
+            &quot;tokenId&quot;:14,
+            &quot;type&quot;:&quot;buy_token_input&quot;,
+            &quot;cny_amount&quot;:100,
+            &quot;amount&quot;:237
+        }
+    ]
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>返回数据：res.data为创建成功的订单号</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>{
+    &quot;code&quot;:0,
+    &quot;message&quot;:&quot;成功&quot;,
+    &quot;data&quot;:&quot;rDg9zGhjZh9NKawcN1t0vKrzmfaEHsg&quot;
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="根据订单号获取订单数据" tabindex="-1"><a class="header-anchor" href="#根据订单号获取订单数据" aria-hidden="true">#</a> 根据订单号获取订单数据</h3><ul><li>GET /orders/{orderId}</li><li>Headers <ul><li>x-access-token: 用户登录的accessToken</li></ul></li><li>返回数据：</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>{
+    &quot;code&quot;:0,
+    &quot;message&quot;:&quot;成功&quot;,
+    &quot;data&quot;:{
+        &quot;trade_no&quot;:&quot;rDg9zGhjZh9NKawcN1t0vKrzmfaEHsg&quot;,
+        &quot;total&quot;:100,
+        &quot;amount&quot;:100,
+        &quot;create_time&quot;:&quot;2020-06-12T02:57:32.000Z&quot;,
+        &quot;status&quot;:0,
+        &quot;use_balance&quot;:0,
+        &quot;items&quot;:{
+            &quot;orderPriceItem&quot;:null,
+            &quot;orderTokenItem&quot;:{
+                &quot;token_id&quot;:14,
+                &quot;pay_cny_amount&quot;:0,
+                &quot;cny_amount&quot;:100,
+                &quot;token_amount&quot;:237,
+                &quot;status&quot;:0,
+                &quot;type&quot;:&quot;buy_token_input&quot;,
+                &quot;name&quot;:&quot;小田的空气币&quot;,
+                &quot;symbol&quot;:&quot;XTB&quot;
+            }
+        }
+    }
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果订单不是你创建的，会返回未授权</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>{
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;未授权&quot;
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="修改订单是否使用余额支付" tabindex="-1"><a class="header-anchor" href="#修改订单是否使用余额支付" aria-hidden="true">#</a> 修改订单是否使用余额支付</h3><ul><li>PUT /orders/{orderId}</li><li>Request Body</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>{&quot;useBalance&quot;:1}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul><li>Headers <ul><li>x-access-token: 用户登录的accessToken</li></ul></li><li>返回数据</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>{&quot;code&quot;:0,&quot;message&quot;:&quot;成功&quot;}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="订单微信支付" tabindex="-1"><a class="header-anchor" href="#订单微信支付" aria-hidden="true">#</a> 订单微信支付</h3><ul><li>POST /order/wxpay</li><li>request Body <ul><li>tradeNo: 订单号</li><li>trade_type： 交易类型，填 NATIVE</li><li>title： 填 购买Fan票</li></ul></li><li>Headers <ul><li>x-access-token: 用户登录的accessToken</li></ul></li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>{
+    &quot;tradeNo&quot;:&quot;rDg9zGhjZh9NKawcN1t0vKrzmfaEHsg&quot;,
+    &quot;trade_type&quot;:&quot;NATIVE&quot;,
+    &quot;title&quot;:&quot;购买Fan票&quot;
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>返回数据 <ul><li>res.code_url：支付二维码地址</li></ul></li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>{
+    &quot;timeStamp&quot;:&quot;1591930899&quot;,
+    &quot;return_code&quot;:&quot;SUCCESS&quot;,
+    &quot;return_msg&quot;:&quot;OK&quot;,
+    &quot;appid&quot;:&quot;wx95829b6a2307300b&quot;,
+    &quot;mch_id&quot;:&quot;1555776841&quot;,
+    &quot;nonce_str&quot;:&quot;wClySkSmwh0pCNcn&quot;,
+    &quot;sign&quot;:&quot;A7E7E0DF18EC77764DE555635B67478F&quot;,
+    &quot;result_code&quot;:&quot;SUCCESS&quot;,
+    &quot;prepay_id&quot;:&quot;wx1211014209249817eb9da9151691218600&quot;,
+    &quot;trade_type&quot;:&quot;NATIVE&quot;,
+    &quot;code_url&quot;:&quot;weixin://wxpay/bizpayurl?pr=zBMNEUw&quot;,
+    &quot;trade_no&quot;:&quot;rDg9zGhjZh9NKawcN1t0vKrzmfaEHsg&quot;
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!--[--><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: istianlei@qq.com">xiaotian</span><!----><!--]--><!--]--></span></div></footer><nav class="page-nav"><p class="inner"><span class="prev"><a href="/documentation/guide/exchange.html" class="" aria-label="交易所系统"><!--[--><!--]--> 交易所系统 <!--[--><!--]--></a></span><span class="next"><a href="/documentation/guide/editor.html" class="" aria-label="编辑器模块"><!--[--><!--]--> 编辑器模块 <!--[--><!--]--></a></span></p></nav><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/documentation/assets/app-b939c1ec.js" defer></script>
+  </body>
+</html>

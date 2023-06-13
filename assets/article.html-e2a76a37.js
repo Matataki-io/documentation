@@ -1,0 +1,42 @@
+import{_ as i,o as e,c as n,e as u}from"./app-b939c1ec.js";const t={},l=u(`<h1 id="文章系统" tabindex="-1"><a class="header-anchor" href="#文章系统" aria-hidden="true">#</a> 文章系统</h1><h3 id="_1-获取热门文章" tabindex="-1"><a class="header-anchor" href="#_1-获取热门文章" aria-hidden="true">#</a> 1. 获取热门文章</h3><ul><li>GET /posts/scoreRanking</li><li>参数 <ul><li>page：当前页数，默认值1</li><li>pagesize：每页大小，默认值20</li></ul></li><li>返回数据，<code>token_</code>为开头的字段为需要的token信息，<code>pay_</code>为开头的为需要支付的信息</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>{
+    &quot;code&quot;:0,
+    &quot;message&quot;:&quot;成功&quot;,
+    &quot;data&quot;:{
+        &quot;count&quot;:3621,
+        &quot;list&quot;:[
+            {
+                &quot;id&quot;:4333,
+                &quot;uid&quot;:1108,
+                &quot;author&quot;:&quot;b****************@g*ail.com&quot;,
+                &quot;title&quot;:&quot;1111&quot;,
+                &quot;status&quot;:0,
+                &quot;hash&quot;:&quot;QmYoNzoAzDNxayyXNZV3DyKvZaEtFLyHdEYFdnT44PcFUo&quot;,
+                &quot;create_time&quot;:&quot;2020-06-11T07:14:35.000Z&quot;,
+                &quot;cover&quot;:&quot;/image/2020/06/11/b47bd713de3733bccefd1de5da08a84c.png&quot;,
+                &quot;require_holdtokens&quot;:0,
+                &quot;require_buy&quot;:0,
+                &quot;short_content&quot;:&quot;111&quot;,
+                &quot;nickname&quot;:&quot;billchen&quot;,
+                &quot;avatar&quot;:&quot;/avatar/2020/06/11/44b0fc8693b9155c8b7970d97cae0a68.jpg&quot;,
+                &quot;read&quot;:8,
+                &quot;likes&quot;:0,
+                &quot;pay_platform&quot;:null,
+                &quot;pay_symbol&quot;:null,
+                &quot;pay_price&quot;:null,
+                &quot;pay_decimals&quot;:null,
+                &quot;pay_stock_quantity&quot;:null,
+                &quot;token_id&quot;:null,
+                &quot;token_amount&quot;:null,
+                &quot;token_name&quot;:null,
+                &quot;token_symbol&quot;:null,
+                &quot;token_decimals&quot;:null,
+                &quot;tags&quot;:[{
+                        &quot;id&quot;:768,
+                        &quot;name&quot;:&quot;哈尔滨工业大学&quot;,
+                        &quot;type&quot;:&quot;post&quot;
+                    }]
+            }
+        ]
+    }
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_2-获取最新文章" tabindex="-1"><a class="header-anchor" href="#_2-获取最新文章" aria-hidden="true">#</a> 2. 获取最新文章</h3><ul><li>GET /posts/scoreRanking</li><li>其他同【1. 获取热门文章】</li></ul>`,6),o=[l];function d(s,a){return e(),n("div",null,o)}const q=i(t,[["render",d],["__file","article.html.vue"]]);export{q as default};

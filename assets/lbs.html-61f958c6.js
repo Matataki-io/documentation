@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as a,b as e,d as c}from"./app-b939c1ec.js";const o={},r=e("h1",{id:"lbs-社交",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#lbs-社交","aria-hidden":"true"},"#"),c(" LBS 社交")],-1),n=[r];function _(d,l){return t(),a("div",null,n)}const h=s(o,[["render",_],["__file","lbs.html.vue"]]);export{h as default};
