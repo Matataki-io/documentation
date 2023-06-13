@@ -23,6 +23,7 @@ Development documentation for the `Matataki` project, front-end and back-end dev
 
 - [Back-end development guide](./backend-development-guide.md)
 - [Back-end deployment guide](./backend-deployment-guide.md)
+- ~~[API document](https://apifox.com/apidoc/shared-95636dd3-7aa6-463d-afd9-9468c9984785) Not yet public. Requires password access~~
 
 
 
